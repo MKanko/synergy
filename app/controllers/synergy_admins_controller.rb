@@ -1,0 +1,2 @@
+class SynergyAdminsController < ApplicationController
+end
