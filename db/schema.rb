@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_29_005159) do
+ActiveRecord::Schema.define(version: 2019_08_29_011026) do
+
+  create_table "companies", force: :cascade do |t|
+    t.string "company_name"
+    t.string "address"
+    t.string "phone_number"
+    t.string "email"
+    t.string "website"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "synergy_admins", force: :cascade do |t|
     t.string "username"
@@ -26,6 +36,7 @@ ActiveRecord::Schema.define(version: 2019_08_29_005159) do
     t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "company_id"
   end
 
 end
